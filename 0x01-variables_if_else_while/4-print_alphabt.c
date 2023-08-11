@@ -13,6 +13,7 @@ int main(void)
 	{
 		if (a == 'q' || a == 'e')
 		{
+			a++;
 			continue;
 		}
 
