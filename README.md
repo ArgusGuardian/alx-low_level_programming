@@ -1,3 +1,3 @@
 # C - programming:
-## C - Hello, World:
-## C - Variables, if, else, while:
+### C - Hello, World:
+### C - Variables, if, else, while:
