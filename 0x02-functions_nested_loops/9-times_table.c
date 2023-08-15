@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * jack_bauer - Function
- * Description: prints all the hours and minutes
+ * times_table - Function
+ * Description: prints table of times 9
  */
 void times_table(void)
 {
@@ -34,6 +34,7 @@ void times_table(void)
 					continue;
 				}
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 		}
