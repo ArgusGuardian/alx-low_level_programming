@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_last_digit - Function
- * @c: character to check
+ * @b: character to check
  * Description: checks if c is negative and make it positive
  * Return: c if positive
  */
