@@ -6,10 +6,11 @@
 void print_alphabet_x10(void)
 {
 	int i;
-	char A = 97;
+	char A;
 
 	for (i = 0; i < 10; i++)
 	{
+		A = 97;
 		while (A != 123)
 		{
 			_putchar(A);
