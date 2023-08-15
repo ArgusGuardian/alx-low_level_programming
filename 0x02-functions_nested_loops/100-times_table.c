@@ -7,15 +7,15 @@
  */
 void print_times_table(int n)
 {
-	int i, j, k, mul = i * j;
+	int i, j, k;
 
 	if (n > 15 || n < 0)
 		return;
-
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
+			int mul = i * j;
 			int rev = 0, count = 0;
 
 			if (j != 0)
