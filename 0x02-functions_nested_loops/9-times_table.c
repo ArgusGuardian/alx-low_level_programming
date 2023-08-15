@@ -21,7 +21,7 @@ void times_table(void)
 				_putchar((mul % 10) + '0');
 				if (j == 9)
 				{
-					continue;
+					break;
 				}
 				_putchar(',');
 				_putchar(' ');
@@ -37,6 +37,6 @@ void times_table(void)
 				_putchar(' ');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
