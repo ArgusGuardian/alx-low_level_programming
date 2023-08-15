@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * times_table - Function
  * Description: prints table of times 9
@@ -11,36 +12,18 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			int mul;
+			int mul = i * j;
 
-			mul = i * j;
+			if (j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (mul <= 9 && j != 0)
+				_putchar(' ');
 			if (mul > 9)
-			{
-
 				_putchar((mul / 10) + '0');
-				_putchar((mul % 10) + '0');
-				if (j == 9)
-				{
-					break;
-				}
-				_putchar(',');
-				if (mul == 10)
-				{
-					_putchar(' ');
-				}
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar(mul + '0');
-				if (j == 9)
-				{
-					continue;
-				}
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
+			_putchar((mul % 10) + '0');
 		}
 		_putchar('\n');
 	}
