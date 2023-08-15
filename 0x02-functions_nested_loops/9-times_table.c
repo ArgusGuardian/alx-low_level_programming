@@ -25,15 +25,17 @@ void times_table(void)
 				}
 				_putchar(',');
 				_putchar(' ');
-				continue;
 			}
-			_putchar(mul + '0');
-			if (j == 9)
+			else
 			{
-				continue;
+				_putchar(mul + '0');
+				if (j == 9)
+				{
+					continue;
+				}
+				_putchar(',');
+				_putchar(' ');
 			}
-			_putchar(',');
-			_putchar(' ');
 		}
 		putchar('\n');
 	}
