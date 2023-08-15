@@ -7,14 +7,15 @@
  */
 void print_times_table(int n)
 {
+	int i, j, k, mul = i * j;
+
 	if (n > 15 || n < 0)
 		return;
 
-	for (int i = 0; i <= n; i++)
+	for (i = 0; i <= n; i++)
 	{
-		for (int j = 0; j <= n; j++)
+		for (j = 0; j <= n; j++)
 		{
-			int mul = i * j;
 			int rev = 0, count = 0;
 
 			if (j != 0)
@@ -23,12 +24,11 @@ void print_times_table(int n)
 				putchar(' '), putchar(' ');
 			else if (mul < 100 && j != 0)
 				putchar(' ');
-
 			if (mul > 9)
 			{
 				while (mul != 0)
 					rev = rev * 10 + mul % 10, mul /= 10, count++;
-				for (int k = 0; k < count; k++)
+				for (k = 0; k < count; k++)
 					putchar(rev % 10 + '0'), rev /= 10;
 			}
 			else
