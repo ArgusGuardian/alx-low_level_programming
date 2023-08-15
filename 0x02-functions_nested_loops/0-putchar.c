@@ -12,6 +12,5 @@ int main(void)
 	for (A = 0; A < 8; A++)
 		_putchar(str[A]);
 	_putchar('\n');
-
 	return (0);
 }
