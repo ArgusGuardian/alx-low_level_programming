@@ -24,6 +24,10 @@ void times_table(void)
 					break;
 				}
 				_putchar(',');
+				if (mul == 10)
+				{
+					_putchar(' ');
+				}
 				_putchar(' ');
 			}
 			else
