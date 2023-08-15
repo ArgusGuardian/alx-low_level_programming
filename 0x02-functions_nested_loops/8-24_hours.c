@@ -1,9 +1,7 @@
 #include "main.h"
 /**
- * print_last_digit - Function
- * @b: character to check
- * Description: checks if c is negative and make it positive
- * Return: c if positive
+ * jack_bauer - Function
+ * Description: prints all the hours and minutes
  */
 void jack_bauer(void)
 {
