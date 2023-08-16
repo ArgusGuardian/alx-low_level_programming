@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * len - calculate the len of string
+ * len - calculate the lenght of a string
  * @x: parameter
  *
  * Return: always 0 (Succes)
