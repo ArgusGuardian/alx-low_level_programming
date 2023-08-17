@@ -3,13 +3,13 @@
 /**
  * print_numbers - print numbers
  */
-void print_numbers(void)
+void print_most_numbers(void)
 {
-	char i;
+	int i;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 48; i <= 57; i++)
 	{
-		if (i == '4' || i == '2')
+		if (i == 52 || i == 50)
 		{
 			continue;
 		}
