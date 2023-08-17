@@ -10,6 +10,12 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
+		if (i == 100)
+		{
+			printf("Buzz\n");
+			break;
+		}
+
 		if (i % 5 == 0 && i % 3 == 0)
 			printf("FizzBuzz ");
 
@@ -22,6 +28,5 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-	printf("\n");
 	return (0);
 }
