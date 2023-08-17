@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * more_numbers - print numbers
+ * print_line - print numbers
+ * @n: parameter
  */
 void print_line(int n)
 {
