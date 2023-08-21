@@ -9,7 +9,8 @@ int main(void)
 	srand((unsigned int)time(&t));
 	while (sum < 2772)
 	{
-		rd = rand() % 128;
+
+				rd = rand() % 128;
 
 		if ((sum + rd) > 2772)
 			break;
