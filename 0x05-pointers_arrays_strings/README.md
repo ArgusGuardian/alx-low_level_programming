@@ -1,0 +1,1 @@
+this repo is for the C - Pointers, arrays and strings project.
