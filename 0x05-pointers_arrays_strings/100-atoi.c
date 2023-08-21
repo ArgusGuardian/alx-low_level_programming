@@ -5,16 +5,26 @@
  * @src: poitner to the source
  * Return: pointer to the destination
  */
-char *_strcpy(char *dest, char *src)
+int _atoi(char *s)
 {
-	int i = 0;
+	int i = 0, a = 1, num = 0, alert = 0;
 
-	while (src[i] != '\0')
+	while (s[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (s[i] == '-')
+		{
+			a *= -1;
+		}
+		while (s[i] >= '0' && s[i] <= '9')
+		{
+			num = num * 10 + (s[i] - '0');
+			i++;
+			alert = 1;
+		}
+		if (alert)
+			return (a * num);
+
 		i++;
 	}
-	dest[i] = '\0';
-
-	return (dest);
+	return (0);
 }
