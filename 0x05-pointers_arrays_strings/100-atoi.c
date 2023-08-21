@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _strcpy - copy string from src to dest
- * @dest: pointer to the destination
- * @src: poitner to the source
- * Return: pointer to the destination
+ * _atoi - copy string from src to dest
+ * @s: pointer to string
+ * Return: integer
  */
 int _atoi(char *s)
 {
