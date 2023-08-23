@@ -21,8 +21,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	while (i >= 0 || j >= 0)
 	{
-		digit1 = (i >= 0) ? (n1[i] - '0') : 0;
-		digit2 = (j >= 0) ? (n2[j] - '0') : 0;
+		if (i >= 0)
+		{
+			digit1 = (n1[i] - '0');
+		}
+		if (j >= 0)
+		{
+			digit2 = (n2[j] - '0');
+		}
 		sum = digit1 + digit2 + change;
 		if (i < 0 && j < 0 && sum == 0)
 		{
