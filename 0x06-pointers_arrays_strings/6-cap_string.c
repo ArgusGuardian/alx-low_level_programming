@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * string_toupper - reverse an int array
+ * cap_string - Capitalizing the first char
  * @str: pointer to string
  * Return: pointer to string
  */
@@ -35,5 +35,5 @@ char *cap_string(char *str)
 		}
 		i++;
 	}
-	return str;
+	return (str);
 }

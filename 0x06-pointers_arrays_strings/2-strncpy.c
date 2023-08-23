@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - copy string to another string
+ * _strncpy - copy string to another string
  * @src: pointer to string
  * @dest: pointer to string
  * @n: number of characters to copy
@@ -16,5 +16,5 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }
