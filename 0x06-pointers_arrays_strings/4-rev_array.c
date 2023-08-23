@@ -6,12 +6,12 @@
  * @n: number of characters to ammend
  * Return: pointer to string
  */
-int _strcmp(char *s1, char *s2)
+void reverse_array(int *a, int n)
 {
-	int i = 0, j = 0, diff;
+	int i = 0;
 
-	while (s1 != '\0' && s2 != '\0')
-		diff = s1[i] - s2[i];
-
-	return diff;
+	for (i = n - 1; i >= 0; i--)
+	{
+		putchar(a[i] + '0');
+	}
 }

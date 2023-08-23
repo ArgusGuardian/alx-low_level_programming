@@ -6,12 +6,17 @@
  * @n: number of characters to ammend
  * Return: pointer to string
  */
-int _strcmp(char *s1, char *s2)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, j = 0, diff;
+	int i = 0, j;
 
-	while (s1 != '\0' && s2 != '\0')
-		diff = s1[i] - s2[i];
-
-	return diff;
+	while (dest[i] != '\0')
+		i++;
+	for (j = 0; j < n; j++)
+	{
+		dest[i] = src[j];
+		i++;
+	}
+	dest[i] = '\0';
+	return dest;
 }
