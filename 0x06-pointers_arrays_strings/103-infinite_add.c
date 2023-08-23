@@ -18,6 +18,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (n2[j] != '\0')
 		j++;
 	j--;
+	if (i > size_r || j > size_r)
+		return (0);
 
 	while (i >= 0 || j >= 0)
 	{
