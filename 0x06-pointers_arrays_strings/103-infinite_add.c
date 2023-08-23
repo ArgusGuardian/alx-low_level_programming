@@ -1,44 +1,46 @@
 #include "main.h"
 /**
- * infinite_add - adds big numbers
- * @n1: string
- * @n2: string
- * @r: string
- * @size_r: size of r string
- * Return: 0 if k > r, pointer to r if not
+ * infinite_add - function that adds two numbers
+ *
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer
+ * @size_r: buffer size
+ * Return: return pointer
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, sum, carry = 0, l, digit1, digit2;
-	char tmp;
+	int i, j, k, l, change, sum;
 
-	for (i = 0; n1[i]; i++)
-		;
-	for (j = 0; n2[j]; j++)
-		;
+	while (n1[i] != '\0')
+		i++;
+	while (n2[j] != '\0')
+		j++;
+
 	if (i > size_r || j > size_r)
 		return (0);
-
+	change = 0;
 	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 	{
-		digit1 = (i >= 0) ? (n1[i] - '0') : 0;
-		digit2 = (j >= 0) ? (n2[j] - '0') : 0;
+		sum = change;
+		if (i >= 0)
+			sum += n1[i] - '0';
+		if (j >= 0)
+			sum += n2[j] - '0';
+		if (i < 0 && j < 0 && sum == 0)
+			break;
 
-		sum = digit1 + digit2 + carry;
-		carry = sum / 10;
-		r[k] = (sum % 10) + '0';
+		change = sum / 10;
+		r[k] = sum % 10 + '0';
 	}
 	r[k] = '\0';
-
-	if (i >= 0 || j >= 0 || carry)
+	if (i >= 0 || j >= 0 || change)
 		return (0);
-
 	for (k -= 1, l = 0; l < k; k--, l++)
 	{
-		tmp = r[k];
+		change = r[k];
 		r[k] = r[l];
-		r[l] = tmp;
+		r[l] = change;
 	}
-
 	return (r);
 }
