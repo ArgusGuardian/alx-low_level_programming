@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcmp - ammend string to another string
+ * _strcmp - compare a string to another string
  * @s1: pointer to string
  * @s2: pointer to string
  * Return: difference in ASCII

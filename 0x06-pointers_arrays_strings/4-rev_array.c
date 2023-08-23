@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * _strncat - ammend string to another string
- * @src: pointer to string
- * @dest: pointer to string
- * @n: number of characters to ammend
- * Return: pointer to string
+ * reverse_array - reverse an int array
+ * @a: pointer to int array
+ * @n: number of int in array
  */
 void reverse_array(int *a, int n)
 {
