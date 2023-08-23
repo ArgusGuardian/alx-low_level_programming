@@ -13,33 +13,37 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	char tmp;
 
 	while (n1[i] != '\0')
-	{
 		i++;
-	}
 	i--;
 	while (n2[j] != '\0')
-	{
 		j++;
-	}
 	j--;
 
-	while (n1[i] != '\0' || n2[j] != '\0')
+	while (i >= 0 || j >= 0)
 	{
-		sum = (n1[i] - '0') + (n2[i] - '0') + change;
+		sum = ((n1[i] - '0') + (n2[i] - '0') + change);
+		change = 0;
 		if (sum >= 10)
 		{
 			sum = sum % 10;
 			change = 1;
 		}
-		r[k] = sum + '0';
+		r[k] = (sum + '0');
 
 		k++;
 		i--;
 		j--;
 	}
-	if (k > size_r)
-		return (0);
+	if (change)
+	{
+		r[k] = change + '0';
+		k++;
+	}
+	r[k] = '\0';
 
+	if (k >= size_r)
+		return (0);
+	k--;
 	for (l = 0; l < k / 2; l++, k--)
 	{
 		tmp = r[l];
