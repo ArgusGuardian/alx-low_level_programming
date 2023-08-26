@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _isdigit - returns the largest of 3 numbers
+ * _isdigit - checks if c is a digit
  * @c: charcter to check
- * Return: 1 if uppecase and 0 if not
+ * Return: 1 if digit and 0 if not
  */
 int _isdigit(int c)
 {
