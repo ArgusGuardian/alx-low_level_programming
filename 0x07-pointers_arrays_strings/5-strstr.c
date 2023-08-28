@@ -10,19 +10,19 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int i, j;
 	char *ptr;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (i = 0; *haystack != '\0'; haystack++)
 	{
-		if (haystack[i] == needle[0])
+		if (*haystack == needle[0])
 		{
 			j = 0;
-			ptr = haystack + i;
-			while (haystack[i] == needle[j] && needle[j] != '\0')
+			ptr = haystack;
+			while (*ptr == needle[j] && needle[j] != '\0')
 			{
 				j++;
-				i++;
+				ptr++;
 			}
 			if (needle[j] == '\0')
-				return (ptr);
+				return (haystack);
 		}
 	}
 	return (NULL);
