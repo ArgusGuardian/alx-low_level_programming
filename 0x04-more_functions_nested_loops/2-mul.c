@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * mul - returns the largest of 3 numbers
+ * mul - product of two integers
  * @a: parameter
  * @b: parameter
  * Return: the product of a and b

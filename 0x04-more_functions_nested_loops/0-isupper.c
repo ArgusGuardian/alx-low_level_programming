@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - returns the largest of 3 numbers
+ * _isupper - checks if the character is uppercase
  * @c: charcter to check
  * Return: 1 if uppecase and 0 if not
  */
