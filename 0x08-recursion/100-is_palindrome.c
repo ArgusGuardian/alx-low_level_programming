@@ -19,6 +19,13 @@ int is_palindrome(char *s)
 	alert = palindome(s, str, len);
 	return (alert);
 }
+/**
+ * palindome - check if string is palindrome
+ *@s: string
+ *@str: string
+ *@len: lenght
+ *Return: return 1 or 0
+ */
 int palindome(char *s, char *str, int len)
 {
 	int alert;
