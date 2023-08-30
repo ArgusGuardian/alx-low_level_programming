@@ -11,6 +11,12 @@ int _sqrt_recursion(int n)
 	sqrt = _sqrt(n, n / 2);
 	return (sqrt);
 }
+/**
+ * _sqrt - return the sqrt of n
+ *@n: integer
+ *@y: integer
+ *Return: return the sqrt of n
+ */
 int _sqrt(int n, int y)
 {
 	int A = 0;
