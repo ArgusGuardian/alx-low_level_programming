@@ -8,15 +8,10 @@ int is_palindrome(char *s)
 {
 	char *str = s;
 	int alert;
-	int len = 0;
+	int len;
 
-	while (*str != '\0')
-	{
-		str++;
-		len++;
-	}
-	str--;
-	alert = palindome(s, str, len);
+	len = length(s);
+	alert = palindome(s, str + len - 1, len);
 	return (alert);
 }
 /**
@@ -37,4 +32,17 @@ int palindome(char *s, char *str, int len)
 
 	alert = palindome(s + 1, str - 1, len - 1);
 	return (alert);
+}
+/**
+ * length - calculates the lenght of string
+ *@s: string
+ *Return: return lenght
+ */
+int length(char *s)
+{
+	int len = 0;
+
+	if (*s != '\0')
+		len = len + 1 + length(s + 1);
+	return (len);
 }
