@@ -36,7 +36,8 @@ int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-	int cents = 0, count = 0;
+	int cents, count = 0, i = 0;
+	int bills[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -50,31 +51,15 @@ int main(int argc, char **argv)
 		printf("0");
 		return (0);
 	}
-	else
+	for (i = 0; i < 5; i++)
 	{
-		while (cents / 25 > 1)
+		while (cents / bills[i] >= 1)
 		{
-			count = cents / 25;
-			cents %= 25;
+			count += cents / bills[i];
+			cents %= bills[i];
 		}
-		while (cents / 10 > 1)
-		{
-			count += cents / 10;
-			cents %= 10;
-		}
-		while (cents / 5 > 1)
-		{
-			count += cents / 5;
-			cents %= 5;
-		}
-		while (cents / 2 > 1)
-		{
-			count += cents / 2;
-			cents %= 2;
-		}
-		if (cents)
-			count++;
 	}
+
 	printf("%d\n", count);
 	return (0);
 }
