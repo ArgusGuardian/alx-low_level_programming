@@ -11,14 +11,17 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, j = 0, k = 0, len1 = 0, len2 = 0;
 	char *concat;
 
-	while (s1[i] != '\0' || s2[j] != '\0')
+	if (s1 != NULL)
 	{
-		if (s1[i] != '\0' && s1 != NULL)
+		while (s1[i] != '\0')
 		{
 			len1++;
 			i++;
 		}
-		if (s2[j] != '\0' && s2 != NULL)
+	}
+	if (s2 != NULL)
+	{
+		while (s2[j] != '\0')
 		{
 			len2++;
 			j++;
@@ -47,4 +50,38 @@ char *str_concat(char *s1, char *s2)
 	concat[k] = '\0';
 
 	return (concat);
+}
+
+int main(void)
+{
+	char *s;
+
+	s = str_concat("Hello", NULL);
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+	s = str_concat(NULL, "Hello");
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+	s = str_concat(NULL, NULL);
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+
+	return (0);
 }
