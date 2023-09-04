@@ -7,24 +7,26 @@
  */
 char *_strdup(char *str)
 {
-	int i = 0;
+	int i = 0, len = 0;
 	char *duplicate;
 
 	if (str == NULL)
 		return (NULL);
 
 	while (str[i] != '\0')
+	{
 		i++;
+		len++;
+	}
 
-	duplicate = (char *)malloc(i);
+	duplicate = (char *)malloc(len + 1);
 	if (duplicate == NULL)
 		return (NULL);
 
-	while (i > 0)
-	{
+	for (i = 0; i < len - 1; i++)
 		duplicate[i] = str[i];
-		i--;
-	}
+
+	duplicate[i] = '\0';
 
 	return (duplicate);
 }
