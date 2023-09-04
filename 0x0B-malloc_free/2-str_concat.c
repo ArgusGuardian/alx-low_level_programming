@@ -11,19 +11,24 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, j = 0, len1 = 0, len2 = 0;
 	char *concat;
 
-	while (s1[i] != '\0' || s2[i] != '\0')
+	while (s1[i] != '\0' || s2[j] != '\0')
 	{
 		if (s1[i] != '\0')
+		{
 			len1++;
-		if (s2[i] != '\0')
+			i++;
+		}
+		if (s2[j] != '\0')
+		{
 			len2++;
-		i++;
+			j++;
+		}
 	}
 	concat = (char *)malloc(len1 + len2 + 1);
 	if (concat == NULL)
 		return (NULL);
 
-	for (i = 0; i < len1 + len2; i++)
+	for (i = 0, j = 0; i < len1 + len2; i++)
 	{
 		if (s1[i] != '\0')
 			concat[i] = s1[i];
@@ -36,4 +41,19 @@ char *str_concat(char *s1, char *s2)
 	concat[i] = '\0';
 
 	return (concat);
+}
+
+int main(void)
+{
+	char *s;
+
+	s = str_concat("Betty ", "Holberton");
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+	return (0);
 }
