@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _strdup - functinon that duplicates a string
- *@str: src string
- * Return: pointer to new string Null if fails
+ * malloc_checked - functinon allocates memory
+ *@b: number of bits
+ * Return: pointer to void
  *
  */
 void *malloc_checked(unsigned int b)
