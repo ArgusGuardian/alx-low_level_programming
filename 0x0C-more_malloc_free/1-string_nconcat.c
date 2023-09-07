@@ -9,29 +9,33 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 = 0, len2 = 0, i = 0, j = 0, alert = 0;
+	unsigned int len1 = 0, len2 = 0, i = 0, j = 0;
 	char *concat;
 
-	while (s2 != NULL && s1[len1] != '\0')
-		len1++;
-	while (s2 != NULL && s2[len2] != '\0')
-		len2++;
+	if (s1 != NULL)
+		while (s1[len1] != '\0')
+			len1++;
+	if (s2 != NULL)
+		while (s2[len2] != '\0')
+			len2++;
 	if (n >= len2)
-		concat = (char *)malloc(len1 + len2 + 1), alert = 0;
+		concat = (char *)malloc(len1 + len2 + 1);
 	else
-		concat = (char *)malloc(len1 + n + 1), alert = 1;
-
+		concat = (char *)malloc(len1 + n + 1);
 	if (concat == NULL)
 		return (NULL);
-
 	while (s1 != NULL && s1[i] != '\0')
-		concat[i] = s1[i], i++;
-	if (alert == 0)
-		for (j = 0; s2 != NULL && s2[j] != '\0'; i++, j++)
-			concat[i] = s2[j];
-	else
-		for (j = 0; s2 != NULL && n > 0; i++, j++, n--)
-			concat[i] = s2[j];
+	{
+		concat[i] = s1[i];
+		i++;
+	}
+	while (s2 != NULL && s2[j] != '\0' && n > 0)
+	{
+		concat[i] = s2[j];
+		i++;
+		j++;
+		n--;
+	}
 	concat[i] = '\0';
 	return (concat);
 }
