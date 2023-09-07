@@ -33,9 +33,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (alert == 0)
 		for (j = 0; s2[j] != '\0'; i++, j++)
 			concat[i] = s2[j];
-	else if (alert == 1)
-		for (j = 0; n > 0; i++, j++)
+	else
+		for (j = 0; n > 0; i++, j++, n--)
 			concat[i] = s2[j];
 	concat[i] = '\0';
 	return (concat);
+}
+
+int main(void)
+{
+	char *concat;
+
+	concat = string_nconcat("Best ", "School !!!", 6);
+	printf("%s\n", concat);
+	free(concat);
+	return (0);
 }
