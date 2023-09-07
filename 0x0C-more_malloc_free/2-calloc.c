@@ -1,16 +1,15 @@
 #include "main.h"
 /**
- * string_nconcat - functinon allocates memory to concat
- *@s1: first string
- *@s2: second string
- *@n: number of chars
+ * _calloc - functinon allocates memory
+ *@nmemb: number of elements
+ *@size: size of each element
  * Return: pointer
  *
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
-	int i;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
