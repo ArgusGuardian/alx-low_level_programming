@@ -1,10 +1,7 @@
 #include "dog.h"
 /**
- * init_dog - initialize dog structure
+ * print_dog - prints dog structure
  * @d: structure type dog
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
  *
  */
 void print_dog(struct dog *d)
