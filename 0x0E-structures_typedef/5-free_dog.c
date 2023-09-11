@@ -1,10 +1,7 @@
 #include "dog.h"
 /**
- * new_dog - create new structure type dog_t
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
- * Return: return strucutre type dog_t
+ * free_dog - frees dog structure
+ * @d: dog structure
  */
 void free_dog(dog_t *d)
 {
