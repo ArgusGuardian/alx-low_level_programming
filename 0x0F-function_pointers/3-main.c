@@ -3,10 +3,11 @@
  * main - pass name to other functions
  * @argc: number of arguments
  * @argv: pointer to arguments
+ * Return: always 0
  */
 int main(int argc, char *argv[])
 {
-	int x, y, result;
+	int x, y;
 	int (*op_ptr)(int, int);
 	char op;
 
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	result = op_ptr(x, y);
-	printf("%d\n", result);
+
+	printf("%d\n", func(x, y));
 	return (0);
 }

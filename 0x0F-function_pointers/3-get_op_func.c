@@ -1,8 +1,8 @@
 #include "3-calc.h"
 /**
- * print_name - pass name to other functions
- * @name: name to print
- * @f: pointer to function
+ * get_op_func - manage the functions
+ * @s: character/operator
+ * Return: return function or NULL
  */
 int (*get_op_func(char *s))(int, int)
 {
