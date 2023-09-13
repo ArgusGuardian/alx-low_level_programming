@@ -1,8 +1,8 @@
 #include "3-calc.h"
 /**
- * print_name - pass name to other functions
- * @name: name to print
- * @f: pointer to function
+ * main - pass name to other functions
+ * @argc: number of arguments
+ * @argv: pointer to arguments
  */
 int main(int argc, char *argv[])
 {
