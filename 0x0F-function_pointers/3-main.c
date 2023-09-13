@@ -31,6 +31,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n", func(x, y));
+	printf("%d\n", op_ptr(x, y));
 	return (0);
 }
