@@ -6,7 +6,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, y;
+	int x, y, result;
 	int (*op_ptr)(int, int);
 	char op;
 
@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", op_ptr(x, y));
+	result = op_ptr(x, y);
+	printf("%d\n", result);
 	return (0);
 }
