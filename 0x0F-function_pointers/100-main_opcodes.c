@@ -8,8 +8,9 @@
 void print_op(void (*func_ptr)(void), int num_op)
 {
 	unsigned char *opcodes = (unsigned char *)func_ptr;
+	int i;
 
-	for (int i = 0; i < num_op; i++)
+	for (i = 0; i < num_op; i++)
 	{
 		printf("%02x", *opcodes);
 		if (i != num_op - 1)
