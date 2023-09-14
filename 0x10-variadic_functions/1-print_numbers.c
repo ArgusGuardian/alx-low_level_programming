@@ -1,4 +1,4 @@
-#include <variadic_functions.h>
+#include "variadic_functions.h"
 /**
  *print_numbers - print all the arguments
  *@n: number of arguments
@@ -17,6 +17,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 		printf("%d", va_arg(args, int));
 	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }
