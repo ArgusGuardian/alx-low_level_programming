@@ -6,9 +6,9 @@
 void print_all(const char *const format, ...)
 {
 	int i = 0;
-	va_list args;
 	char *word;
 	char *sep = "";
+	va_list args;
 
 	va_start(args, format);
 
@@ -41,6 +41,6 @@ void print_all(const char *const format, ...)
 		sep = ", ";
 		i++;
 	}
-	va_end(args);
 	printf("\n");
+	va_end(args);
 }
