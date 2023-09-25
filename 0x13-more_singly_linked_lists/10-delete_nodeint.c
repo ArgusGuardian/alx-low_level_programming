@@ -1,10 +1,9 @@
 #include "lists.h"
 /**
- *insert_nodeint_at_index - get the sum of all the data in linked list
+ *delete_nodeint_at_index - delete the node at the index
  *@head: head of linked list
- *@idx: index that we should add node at
- *@n: data for the node
- *Return: return pointer to the new node
+ *@index: index that we should delete the node at
+ *Return: return 1 if successful and -1 if failed
  *
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)

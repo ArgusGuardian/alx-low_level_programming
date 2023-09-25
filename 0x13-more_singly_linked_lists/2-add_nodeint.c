@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  *add_nodeint - add a node to the first of the list
- *@h: linked list
+ *@head: head linked list
  *@n: data
  *Return: address to the new node
  *
@@ -14,16 +14,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	if (newnode == NULL)
 		return (NULL);
 	newnode->n = n;
-
-	if (*head == NULL)
-	{
-		*head = newnode;
-		newnode->next = NULL;
-	}
-	else
-	{
-		newnode = *head;
-		*head = newnode;
-	}
+	newnode->next = *head;
+	*head = newnode;
 	return (newnode);
 }
