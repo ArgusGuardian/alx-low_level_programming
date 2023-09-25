@@ -1,8 +1,9 @@
 #include "lists.h"
 /**
- *pop_listint - pop the first node in the linked list
+ *get_nodeint_at_index - get the node at the index
  *@head: head of linked list
- *Return: value of the node popped
+ *@index: index of the wanted node
+ *Return: return the node with the index
  *
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
