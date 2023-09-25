@@ -1,8 +1,9 @@
 #include "lists.h"
 /**
- *listint_len - return the number of nodes in linked list
+ *add_nodeint - add a node to the first of the list
  *@h: linked list
- *Return: number of nodes
+ *@n: data
+ *Return: address to the new node
  *
  */
 listint_t *add_nodeint(listint_t **head, const int n)
