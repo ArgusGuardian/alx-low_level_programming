@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- *clear_bit - convert a bit to 0
+ *flip_bits - number of bits need to shift to pass from n to m
  *@n: decimal
- *@index: index of the bit to return
- *Return: -1 or 1
+ *@m: decimal
+ *Return: count
  *
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
