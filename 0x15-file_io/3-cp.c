@@ -15,18 +15,6 @@ void error_exit(int code, const char *message, const char *arg)
 	exit(code);
 }
 /**
- * error_exit2 - exit helper function
- * @code: code to exit with
- * @message: message to print
- * @arg: argument
- */
-
-void error_exit2(int code, const char *message, int arg)
-{
-	dprintf(2, message, arg);
-	exit(code);
-}
-/**
  * main - read from file_from and copy to file_to
  * @argc: number of terminal args
  * @argv: terminal args
@@ -68,10 +56,8 @@ int main(int argc, char *argv[])
 		close(fd_from), close(fd_to);
 		free(buff), error_exit(98, "Error: Can't read from file %s\n", argv[1]);
 	}
-	if (close(fd_from) == -1)
-		free(buff), error_exit2(100, "Error: Can't close fd %d\n", fd_from);
-	if (close(fd_to) == -1)
-		free(buff), error_exit2(100, "Error: Can't close fd %d\n", fd_to);
+	close(fd_from);
+	close(fd_to);
 	free(buff);
 	return (0);
 }
