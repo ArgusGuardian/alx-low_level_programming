@@ -74,5 +74,5 @@ int main(int argc, char *argv[])
 	close_file(from_fd);
 	close_file(to_fd);
 
-	return 0;
+	return (0);
 }
