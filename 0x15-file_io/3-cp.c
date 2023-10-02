@@ -11,7 +11,7 @@
 
 void error_exit(int code, const char *message, const char *arg)
 {
-	dprintf(2, message, arg);
+	dprintf(STDERR_FILENO, message, arg);
 	exit(code);
 }
 /**
