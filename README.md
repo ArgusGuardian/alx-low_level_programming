@@ -1,5 +1,7 @@
-# C - programming:
-### C - Hello, World:
-### C - Variables, if, else, while:
+# C - programming
 
-### C - Functions, nested loops:
+## C - Hello, World
+
+## C - Variables, if, else, while
+
+## C - Functions, nested loops
