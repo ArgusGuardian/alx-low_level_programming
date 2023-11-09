@@ -1,12 +1,13 @@
 #include "lists.h"
 /**
- * dlistint_len - count number of nodes
- *@h: header
+ * add_dnodeint - add node at the start of the list
+ *@head: header
+ *@n: data
  * Return: returns the number of nodes
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new = *head;
+	dlistint_t *new;
 
 	new = malloc(sizeof(dlistint_t));
 	if (!new)
@@ -22,6 +23,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	else
 	{
 		new->next = (*head);
+		(*head)->prev = new;
 		(*head) = new;
 	}
 	return (new);
