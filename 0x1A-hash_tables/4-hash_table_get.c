@@ -17,9 +17,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	crnt = ht->array[idx];
 
 	while (crnt && strcmp(crnt->key, key) != 0)
-	{
 		crnt = crnt->next;
-	}
 	if (crnt == NULL)
 		return (NULL);
 	return (crnt->value);
