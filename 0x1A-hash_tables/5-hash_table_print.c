@@ -1,10 +1,13 @@
 #include "hash_tables.h"
-
+/**
+ * hash_table_print - prints the hashtable
+ * @ht: pointer to table
+ */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *new;
+	hash_node_t *current;
 	unsigned long int i;
-	unsigned char flag = 0;
+	unsigned char alert = 0;
 
 	if (ht != NULL)
 	{
@@ -13,18 +16,18 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (ht->array[i] != NULL)
 			{
-				if (flag == 1)
+				if (alert == 1)
 					printf(", ");
 
-				new = ht->array[i];
-				while (new != NULL)
+				current = ht->array[i];
+				while (current != NULL)
 				{
-					printf("'%s': '%s'", new->key, new->value);
-					new = new->next;
-					if (new != NULL)
+					printf("'%s': '%s'", current->key, current->value);
+					current = current->next;
+					if (current != NULL)
 						printf(", ");
 				}
-				flag = 1;
+				alert = 1;
 			}
 		}
 		printf("}\n");
