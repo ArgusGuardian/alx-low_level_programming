@@ -8,38 +8,38 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *current;
-	hash_node_t *temp;
+	hash_node_t *crnt;
+	hash_node_t *tmp;
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	temp = ht->array[index];
-	while (temp != NULL)
+	tmp = ht->array[index];
+	while (tmp != NULL)
 	{
-		if (strcmp(temp->key, key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 		{
-			free(temp->value);
-			temp->value = strdup(value);
-			if (!temp->value)
+			free(tmp->value);
+			tmp->value = strdup(value);
+			if (!tmp->value)
 				return (0);
 			return (1);
 		}
-		temp = temp->next;
+		tmp = tmp->next;
 	}
-	current = create(key, value);
-	if (!current)
+	crnt = create(key, value);
+	if (!crnt)
 		return (0);
 	if (ht->array[index])
 	{
-		current->next = ht->array[index];
-		ht->array[index] = current;
+		crnt->next = ht->array[index];
+		ht->array[index] = crnt;
 	}
 	else
 	{
-		ht->array[index] = current;
+		ht->array[index] = crnt;
 	}
 	return (1);
 }
@@ -48,23 +48,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @key: key of node
  * @value: value of node
  * Return: return the node
-*/
+ */
 hash_node_t *create(const char *key, const char *value)
 {
-	hash_node_t *current;
+	hash_node_t *crnt;
 
-	current = malloc(sizeof(hash_node_t));
-	if (!current)
+	crnt = malloc(sizeof(hash_node_t));
+	if (!crnt)
 		return (NULL);
 
-	current->key = malloc(strlen(key) + 1);
-	if (!current->key)
+	crnt->key = malloc(strlen(key) + 1);
+	if (!crnt->key)
 		return (NULL);
-	current->value = malloc(strlen(value) + 1);
-	if (!current->value)
+	crnt->value = malloc(strlen(value) + 1);
+	if (!crnt->value)
 		return (NULL);
-	strcpy(current->key, key);
-	strcpy(current->value, value);
-	current->next = NULL;
-	return (current);
+	strcpy(crnt->key, key);
+	strcpy(crnt->value, value);
+	crnt->next = NULL;
+	return (crnt);
 }
