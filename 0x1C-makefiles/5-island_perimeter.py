@@ -5,11 +5,8 @@
 def island_perimeter(grid):
     """this is a function to measure perimet of an island"""
     x = len(grid[0])
-    
     y = len(grid)
-
     nobes = 0
-
     s = 0
 
     for i in range(y):
