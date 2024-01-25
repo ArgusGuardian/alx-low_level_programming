@@ -1,1 +1,4 @@
-#!/usr/bin/env bash
+CC:= gcc
+SRC:= $(wildcard *.c)
+all:
+	$(CC) $(SRC)
