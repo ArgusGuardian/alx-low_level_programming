@@ -2,9 +2,9 @@ CC = gcc
 SRC = school.c main.c
 OBJ = main.o school.o
 NAME = school
-all:OBJ
+all:$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-OBJ:main.c school.c
+main.o school.o: main.c school.c
 	$(CC) -c main.c -o main.o
 	$(CC) -c school.c -o school.o
