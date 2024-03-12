@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <cstdio>
 
 /**
  * linear_search - search in a leanear way
